@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login page</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet"
+  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body>
+    <div class="login-box">
+        <h1>Login</h1>
+        <!-- Email input -->
+        <div class="input-box">
+            <i class="fa-solid fa-envelope"></i>
+            <input type="email" placeholder="Enter Email">
+        </div>
+        <!-- password input -->
+         <div class="input-box">
+                  <i class="fa-solid fa-lock"></i>
+<input type="password" id="password" placeholder="Enter Password">
+<span id="showbirth">Show</span>
+         </div>
+         <!-- Remember me -->
+          <div class="remember">
+            <input type="checkbox" id="check">
+            <label for="check">Remember me</label>
+          </div>
+          <button>Login</button>
+          <!-- Signup Link -->
+           <p class="signup">
+            Don't have an account?
+            <a href="#">Signup</a>
+           </p>
+    </div>
+   <script>
+    const password = document.getElementById("password");
+    const showBtn = document.getElementById("showBtn");
+
+    showBtn.onclick = function(){
+
+      if(password.type === "password"){
+        password.type = "text";
+        showBtn.innerText = "Hide";
+      }
+
+      else{
+        password.type = "password";
+        showBtn.innerText = "Show";
+      }
+    }
+  </script>
+</body>
+</html>
